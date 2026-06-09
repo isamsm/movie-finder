@@ -43,7 +43,7 @@ export default function Finder() {
             <div className="max-w-[264px] w-full">
                 <p className="lg:text-xl text-base text-defalt-grey pb-2"> Gênero do filme </p>
                 <form className="flex gap-3 items-center w-full" onSubmit={(e) => findMovie(e)}>
-                    <select className="h-10 rounded-[4px] border w-full border-defalt-grey bg-transparent text-sm text-defalt-grey" onChange={(e) => changeGenre(e)}>
+                    <select className="h-10 rounded-[4px] border w-full border-defalt-grey bg-transparent text-sm text-defalt-grey appearance-none px-2" onChange={(e) => changeGenre(e)}>
                         <option value=""> Sem gênero </option>
                         <option value={28}> Ação </option>
                         <option value={16}> Animação </option>
