@@ -2,7 +2,7 @@
 
 ## Sobre
 
-### Projeto de um randomizador de filmes feito usando React, Tailwind e a api "The Movie Database" para praticar o uso de CustomHooks. 
+### Projeto de um randomizador de filmes feito usando React, Tailwind e a api "The Movie Database" para praticar o uso de Custom Hooks. 
 
 ## Como usar
 
