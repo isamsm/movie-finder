@@ -12,7 +12,7 @@ export default function useFetch() {
             const data = await response.json();
             let dataLimited
             
-            if(firstNum < data.results.length || secNum < data.results.length) {
+            if(firstNum < data.results.length && secNum < data.results.length) {
                 dataLimited = data.results.slice(firstNum, secNum)
             } else {
                 dataLimited = data.results.slice(0, 7)
