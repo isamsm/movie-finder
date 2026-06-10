@@ -2,6 +2,45 @@ import { useRef, useState } from "react"
 import useFetch from "./useFetch"
 import useRandomNumber from "./useRandomNumber"
 
+const options = [
+    {
+        id: 28,
+        value: "Ação"
+    },
+    {
+        id: 16,
+        value: "Animação"
+    },
+    {
+        id: 18,
+        value: "Drama"
+    },
+    {
+        id: 14,
+        value: "Fantasia"
+    },
+    {
+        id: 36,
+        value: "História"
+    },
+    {
+        id: 27,
+        value: "Terror"
+    },
+    {
+        id: 9648,
+        value: "Mistério"
+    },
+    {
+        id: 878,
+        value: "Ficção científica"
+    },
+    {
+        id: 878,
+        value: "Thriller"
+    },
+]
+
 export default function Finder() {
     let url
 
@@ -45,15 +84,9 @@ export default function Finder() {
                 <form className="flex gap-3 items-center w-full" onSubmit={(e) => findMovie(e)}>
                     <select className="h-10 rounded-[4px] border w-full border-defalt-grey bg-transparent text-sm text-defalt-grey appearance-none px-2" onChange={(e) => changeGenre(e)}>
                         <option value=""> Sem gênero </option>
-                        <option value={28}> Ação </option>
-                        <option value={16}> Animação </option>
-                        <option value={18}> Drama </option>
-                        <option value={14}> Fantasia </option>
-                        <option value={36}> História </option>
-                        <option value={27}> Terror </option>
-                        <option value={9648}> Mistério </option>
-                        <option value={878}> Ficção científica </option>
-                        <option value={53}> Thriller </option>
+                        {options.map((option) => 
+                            <option value={option.id}> {option.value} </option>
+                        )}
                     </select>
                     <button className="h-10 max-w-[60px] w-full bg-defalt-darker-purple text-white rounded-[4px] lg:text-base text-sm" type="submit"> OK </button>
                 </form>
